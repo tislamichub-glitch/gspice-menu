@@ -237,7 +237,7 @@
    ============================================================ */
 const CONFIG = {
   restaurantName: "G.Spice Restaurant",
-  tagline:        "Eat. Play. Celebrate.",
+  tagline:        "Khao, Khelo, Jashan Manao.",
   phone:          "03151462701",
   address:        "Pir Mahal, Pakistan",
   socialUrl:      "https://claude.ai/artifact/C9DNsyWwFFZqjePGoVQGzU"   // paste the link of your G.Spice Social Hub page here (optional)
@@ -274,19 +274,23 @@ const CATS = [
     note: "<b>Extra topping:</b> Small Rs. 100 &nbsp;•&nbsp; Medium Rs. 150 &nbsp;•&nbsp; Large Rs. 200",
     groups: [
       { title: "Special Pizza", cols: ["Small", "Medium", "Large"], items: [
-        ["G. Special Pizza", "", [650, 1150, 1600]],
+        ["G. Special Pizza", "", [650, 1200, 1700]],
         ["Chicken Super Supreme", "", [650, 1150, 1600]],
-        ["Malai Boti Pizza", "", [650, 1150, 1600]] ] },
+        ["Malai Boti Pizza", "", [null, 1200, 1650]] ] },
       { title: "Crust Pizza", cols: ["Small", "Medium", "Large"], items: [
         ["Lasagna Pizza", "", [null, 1250, 1800]],
         ["Kabab Crust Pizza", "", [null, 1250, 1800]],
-        ["Crown Crust Pizza", "", [null, 1250, 1800]] ] },
+        ["Crown Crust Pizza", "", [null, 1250, 1800]],
+        ["Deep Pan Pizza", "", [null, 1500, 2200]],
+        ["Extreme Pizza", "", [null, 1500, 2200]],
+        ["Power Crust Pizza", "", [null, 1300, 2000]],
+        ["Bone Fire Pizza", "", [null, 1300, 2000]] ] },
       { title: "Regular Pizza", cols: ["Small", "Medium", "Large"], items: [
-        ["Chicken Tikka Pizza", "", [600, 1050, 1450]],
-        ["Chicken Fajita Pizza", "", [600, 1050, 1450]],
-        ["Hot & Spicy Pizza", "", [600, 1050, 1450]],
-        ["Bar B.Q Pizza", "", [600, 1050, 1450]],
-        ["Tandoori Pizza", "", [600, 1050, 1450]],
+        ["Chicken Tikka Pizza", "", [600, 1090, 1550]],
+        ["Chicken Fajita Pizza", "", [600, 1090, 1550]],
+        ["Hot & Spicy Pizza", "", [600, 1090, 1550]],
+        ["Bar B.Q Pizza", "", [600, 1090, 1550]],
+        ["Tandoori Pizza", "", [600, 1090, 1550]],
         ["Margherita Pizza", "", [600, 1050, 1450]],
         ["Vegetable Pizza", "", [600, 1050, 1450]] ] }
     ] },
@@ -295,9 +299,11 @@ const CATS = [
     ["Patty Burger", "", 300], ["Chicken Cheese Burger", "", 350], ["Chicken Chapli Burger", "", 300],
     ["Zinger Tower Burger", "", 650] ] } ] },
   { id: "appetizer", title: "Appetizers", img: "appetizer", groups: [ { cols: [], items: [
-    ["Jumbo Chicken", "جمبو چکن", 1290], ["Dhaka Chicken", "ڈھاکا چکن", 1100], ["Sp. Chicken Pakora", "اسپیشل چکن پکوڑا", 1100],
-    ["Honey Wings", "ہنی ونگز", 960], ["Dhaka Fish (6 pcs)", "ڈھاکہ فش (6 پیس)", 1550],
-    ["Finger Fish (10 pcs)", "فنگر فش (10 پیس)", 1650], ["Fried Fish", "فرائیڈ فش", null] ] } ] },
+    ["Jumbo Chicken", "جمبو چکن", 1300], ["Dhaka Chicken", "ڈھاکا چکن", 1100], ["Sp. Chicken Pakora", "اسپیشل چکن پکوڑا", 1100],
+    ["Honey Wings (12 pcs)", "ہنی ونگز (12 پیس)", 960], ["Dhaka Fish (6 pcs)", "ڈھاکہ فش (6 پیس)", 1550],
+    ["Finger Fish (6 pcs)", "فنگر فش (6 پیس)", 1650], ["Fried Fish", "فرائیڈ فش", null],
+    ["Custard/Kheer", "", 2000], ["Gulberg Jamun (2 pcs)", "", 200], ["Butter Fly Chicken", "", 1150],
+    ["Grilled Fish", "", 1500], ["Mutton Leg Roste", "", 6500] ] } ] },
   { id: "soup", title: "Soup", img: "soup", groups: [ { cols: ["Half", "Full"], items: [
     ["G. Special Soup", "جی اسپیشل سوپ", [650, 1050]], ["Hot & Sour Soup", "ہاٹ اینڈ سور سوپ", [500, 850]],
     ["Chicken Corn Soup", "چکن کارن سوپ", [450, 800]], ["Red Schezwan Soup", "ریڈ سزوان سوپ", [550, 950]],
@@ -349,9 +355,12 @@ const CATS = [
   { id: "salad", title: "Salad", img: "salad", groups: [ { cols: [], items: [
     ["G. Sp. Salad", "جی اسپیشل سلاد", 850], ["Russian Salad", "رشین سلاد", 650], ["Fruit Salad", "فروٹ سلاد", 750],
     ["Kachumber Salad", "کچومر سلاد", 250], ["Fresh Salad", "فریش سلاد", 120], ["Raita Mint / Zeera", "رائتہ پودینہ / زیرہ", 120] ] } ] },
-  { id: "fried", title: "Fried", img: "fried", groups: [ { cols: ["8 Pc", "12 Pc"], items: [
-    ["Chicken Popper", "", [300, 600]], ["Hot Shots", "", [300, 600]], ["Nuggets", "", [300, 600]],
-    ["Chicken Donut", "", [450, 900]], ["Hot Wings", "", [320, 640]], ["Oven Baked Wings", "", [350, 700]] ] } ] },
+  { id: "fried", title: "Fried", img: "fried", groups: [
+    { cols: ["8 Pc", "12 Pc"], items: [
+      ["Chicken Popper", "", [300, 600]], ["Hot Shots", "", [300, 600]], ["Chicken Donut", "", [450, 900]] ] },
+    { cols: ["6 Pc", "12 Pc"], items: [
+      ["Nuggets", "", [350, 700]], ["Hot Wings", "", [350, 700]], ["Oven Baked Wings", "", [380, 750]] ] }
+  ] },
   { id: "fries", title: "Fries", img: "fries", groups: [ { cols: ["Large"], items: [
     ["Fries", "", [380]], ["Masala Fries", "", [400]], ["Mayo Fries", "", [450]], ["Loaded Cheese Fries", "", [900]] ] } ] },
   { id: "pasta", title: "Pasta", img: "pasta", groups: [ { cols: ["Medium"], items: [
